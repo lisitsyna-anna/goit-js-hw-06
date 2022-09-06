@@ -3,6 +3,8 @@ const refs = {
   text: document.querySelector('#text'),
 };
 
+refs.text.style.fontSize = refs.inputFsControl.value + 'px';
+
 refs.inputFsControl.addEventListener('input', onInputChange);
 
 function onInputChange(event) {

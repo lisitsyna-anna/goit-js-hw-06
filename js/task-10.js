@@ -13,6 +13,8 @@ function createBoxes(amount) {
   let widthBox = 30;
   let heightBox = 30;
 
+  let boxesArray = [];
+
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
 
@@ -22,8 +24,10 @@ function createBoxes(amount) {
 
     widthBox += 10;
     heightBox += 10;
-    refs.boxes.append(box);
+
+    boxesArray.push(box);
   }
+  refs.boxes.append(...boxesArray);
 }
 
 function onBtnCreate() {
